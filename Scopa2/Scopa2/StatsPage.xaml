@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Scopa2.StatsPage">
+    <AbsoluteLayout>
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,0,1,.25" AbsoluteLayout.LayoutFlags="All"
+                            BackgroundGradientStartPoint="0,0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#493240" Offset="0" />
+                    <yummy:GradientStop Color="#ff0099" Offset="1" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <BoxView AbsoluteLayout.LayoutBounds="0,.5,1,.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="SeaGreen"/>
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,1,1,.25" AbsoluteLayout.LayoutFlags="All"
+                            BackgroundGradientStartPoint="0,0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#ff0099" Offset="0"/>
+                    <yummy:GradientStop Color="#493240" Offset="1"/>
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <Label AbsoluteLayout.LayoutBounds=".5,0,.42,.25" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="Center"
+               VerticalOptions="Center" TextColor="White" FontSize="40" WidthRequest="332" x:Name="winnerOrLoser"></Label>
+        <Grid AbsoluteLayout.LayoutBounds=".5,.5,.6,.46"
+              AbsoluteLayout.LayoutFlags="All" RowSpacing="0" ColumnSpacing="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.5*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1"
+               Text="YOU"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Column="2"
+               Text="AI"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="1"
+               Text="Cards captured:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="1"
+               Grid.Column="1"
+               x:Name="humanResult"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="1"
+               Grid.Column="2"
+               x:Name="aiResult"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="2"
+               Text="High capture bonus:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="2"
+               Grid.Column="1"
+               x:Name="humanHasMore"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="2"
+               Grid.Column="2"
+               x:Name="aiHasMore"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="3"
+               Text="Most diamond-suit cards:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="3"
+               Grid.Column="1"
+               x:Name="humanHasMoreDiamonds"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="3"
+               Grid.Column="2"
+               x:Name="aiHasMoreDiamonds"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="4"
+               Text="Most sevens:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="4"
+               Grid.Column="1"
+               x:Name="humanHasMoreSevens"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="4"
+               Grid.Column="2"
+               x:Name="aiHasMoreSevens"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="5"
+               Text="Seven of diamonds:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="5"
+               Grid.Column="1"
+               x:Name="humanHasSevenOfDiamonds"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="5"
+               Grid.Column="2"
+               x:Name="aiHasSevenOfDiamonds"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="6"
+               Text="Scopas:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="6"
+               Grid.Column="1"
+               x:Name="humanScopasLabel"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="6"
+               Grid.Column="2"
+               x:Name="aiScopasLabel"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="7"
+               Text="Total:"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="End"
+               VerticalOptions="Center" />
+            <Label Grid.Row="7"
+               Grid.Column="1"
+               x:Name="humanTotalLabel"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Label Grid.Row="7"
+               Grid.Column="2"
+               x:Name="aiTotalLabel"
+               TextColor="White"
+               FontSize="Micro"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+            <Button Grid.Row="8"
+               Grid.Column="1"
+               Padding="0,0,0,0"
+               x:Name="doneButton"
+               Clicked="doneButton_Clicked"
+               Text="DONE"
+               TextColor="GreenYellow"
+               BackgroundColor="SeaGreen"></Button>
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Scopa2.MainPage">
+
+    <AbsoluteLayout x:Name="game">
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,0,1,.25" AbsoluteLayout.LayoutFlags="All"
+                            BackgroundGradientStartPoint="0,0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#493240" Offset="0" />
+                    <yummy:GradientStop Color="#ff0099" Offset="1" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <BoxView AbsoluteLayout.LayoutBounds="0,.5,1,.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="SeaGreen"/>
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,1,1,.25" AbsoluteLayout.LayoutFlags="All"
+                            BackgroundGradientStartPoint="0,0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#ff0099" Offset="0" />
+                    <yummy:GradientStop Color="#493240" Offset="1" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <BoxView x:Name="whiteBorder" AbsoluteLayout.LayoutBounds=".5,.5,.6,.4" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White"/>
+        <StackLayout x:Name="greenStack" AbsoluteLayout.LayoutBounds=".5,.5,.59,.38" AbsoluteLayout.LayoutFlags="All" BackgroundColor="SeaGreen">
+            <Label Text="WELCOME TO SCOPA!" TextColor="White" FontSize="35" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center" Margin="0, 5, 0, 0"></Label>
+            <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Margin="8">
+                <Button x:Name="showRulesButton" Text="HOW TO PLAY" TextColor="White" FontSize="20" BackgroundColor="SeaGreen" BorderColor="White"
+                        BorderWidth="2" WidthRequest="225" HorizontalOptions="CenterAndExpand" Clicked="showRulesButton_Clicked"></Button>
+                <Button x:Name="playButton" Text="PLAY NOW" TextColor="White"
+                        BorderColor="White" WidthRequest="225" HorizontalOptions="CenterAndExpand"
+                        BorderWidth="2" FontSize="20" Clicked="playButton_Clicked">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="MediumVioletRed" Offset="0.0"/>
+                            <GradientStop Color="#ff0099" Offset="1.0"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

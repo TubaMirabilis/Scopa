@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Scopa2.RulesPage">
+    <AbsoluteLayout>
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,0,1,.25" AbsoluteLayout.LayoutFlags="All"
+                            BackgroundGradientStartPoint="0,0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#493240" Offset="0" />
+                    <yummy:GradientStop Color="#ff0099" Offset="1" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <BoxView AbsoluteLayout.LayoutBounds="0,.5,1,.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="SeaGreen"/>
+        <yummy:PancakeView AbsoluteLayout.LayoutBounds="0,1,1,.25" AbsoluteLayout.LayoutFlags="All"
+                            BackgroundGradientStartPoint="0,0">
+            <yummy:PancakeView.BackgroundGradientStops>
+                <yummy:GradientStopCollection>
+                    <yummy:GradientStop Color="#ff0099" Offset="0" />
+                    <yummy:GradientStop Color="#493240" Offset="1" />
+                </yummy:GradientStopCollection>
+            </yummy:PancakeView.BackgroundGradientStops>
+        </yummy:PancakeView>
+        <StackLayout AbsoluteLayout.LayoutBounds=".5,.5,.6,.4" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
+            <StackLayout BackgroundColor="SeaGreen" Margin="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <ScrollView>
+                <Label x:Name="rulesLabel" TextColor="White" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"
+                       Margin="4,4,4,0"></Label>
+                </ScrollView>
+                <Button x:Name="okayButton" Text="UNDERSTOOD" HorizontalOptions="Center" VerticalOptions="EndAndExpand"
+                        BackgroundColor="DarkGreen" TextColor="White" BorderColor="White" BorderWidth="2.5"
+                        Padding="10" Margin="0,0,0,3" Clicked="okayButton_Clicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>

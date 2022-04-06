@@ -1,0 +1,137 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\AC.jpg" />
+    <None Remove="images\AD.jpg" />
+    <None Remove="images\AH.jpg" />
+    <None Remove="images\AS.jpg" />
+    <None Remove="images\Clubs10.jpg" />
+    <None Remove="images\Clubs2.jpg" />
+    <None Remove="images\Clubs3.jpg" />
+    <None Remove="images\Clubs4.jpg" />
+    <None Remove="images\Clubs5.jpg" />
+    <None Remove="images\Clubs6.jpg" />
+    <None Remove="images\Clubs7.jpg" />
+    <None Remove="images\Clubs8.jpg" />
+    <None Remove="images\Clubs9.jpg" />
+    <None Remove="images\Diamonds10.jpg" />
+    <None Remove="images\Diamonds2.jpg" />
+    <None Remove="images\Diamonds3.jpg" />
+    <None Remove="images\Diamonds4.jpg" />
+    <None Remove="images\Diamonds5.jpg" />
+    <None Remove="images\Diamonds6.jpg" />
+    <None Remove="images\Diamonds7.jpg" />
+    <None Remove="images\Diamonds8.jpg" />
+    <None Remove="images\Diamonds9.jpg" />
+    <None Remove="images\Hearts10.jpg" />
+    <None Remove="images\Hearts2.jpg" />
+    <None Remove="images\Hearts3.jpg" />
+    <None Remove="images\Hearts4.jpg" />
+    <None Remove="images\Hearts5.jpg" />
+    <None Remove="images\Hearts6.jpg" />
+    <None Remove="images\Hearts7.jpg" />
+    <None Remove="images\Hearts8.jpg" />
+    <None Remove="images\Hearts9.jpg" />
+    <None Remove="images\purple_back.jpg" />
+    <None Remove="images\Spades10.jpg" />
+    <None Remove="images\Spades2.jpg" />
+    <None Remove="images\Spades3.jpg" />
+    <None Remove="images\Spades4.jpg" />
+    <None Remove="images\Spades5.jpg" />
+    <None Remove="images\Spades6.jpg" />
+    <None Remove="images\Spades7.jpg" />
+    <None Remove="images\Spades8.jpg" />
+    <None Remove="images\Spades9.jpg" />
+    <None Remove="images\Yellow_back.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="morelinq" Version="3.3.2" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.10" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\purple_back.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\Yellow_back.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\AC.jpg" />
+    <EmbeddedResource Include="images\AD.jpg" />
+    <EmbeddedResource Include="images\AH.jpg" />
+    <EmbeddedResource Include="images\AS.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\Clubs10.jpg" />
+    <EmbeddedResource Include="images\Clubs2.jpg" />
+    <EmbeddedResource Include="images\Clubs3.jpg" />
+    <EmbeddedResource Include="images\Clubs4.jpg" />
+    <EmbeddedResource Include="images\Clubs5.jpg" />
+    <EmbeddedResource Include="images\Clubs6.jpg" />
+    <EmbeddedResource Include="images\Clubs7.jpg" />
+    <EmbeddedResource Include="images\Clubs8.jpg" />
+    <EmbeddedResource Include="images\Clubs9.jpg" />
+    <EmbeddedResource Include="images\Diamonds10.jpg" />
+    <EmbeddedResource Include="images\Diamonds2.jpg" />
+    <EmbeddedResource Include="images\Diamonds3.jpg" />
+    <EmbeddedResource Include="images\Diamonds4.jpg" />
+    <EmbeddedResource Include="images\Diamonds5.jpg" />
+    <EmbeddedResource Include="images\Diamonds6.jpg" />
+    <EmbeddedResource Include="images\Diamonds7.jpg" />
+    <EmbeddedResource Include="images\Diamonds8.jpg" />
+    <EmbeddedResource Include="images\Diamonds9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\Hearts10.jpg" />
+    <EmbeddedResource Include="images\Hearts2.jpg" />
+    <EmbeddedResource Include="images\Hearts3.jpg" />
+    <EmbeddedResource Include="images\Hearts4.jpg" />
+    <EmbeddedResource Include="images\Hearts5.jpg" />
+    <EmbeddedResource Include="images\Hearts6.jpg" />
+    <EmbeddedResource Include="images\Hearts7.jpg" />
+    <EmbeddedResource Include="images\Hearts8.jpg" />
+    <EmbeddedResource Include="images\Hearts9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="images\Spades10.jpg" />
+    <EmbeddedResource Include="images\Spades2.jpg" />
+    <EmbeddedResource Include="images\Spades3.jpg" />
+    <EmbeddedResource Include="images\Spades4.jpg" />
+    <EmbeddedResource Include="images\Spades5.jpg" />
+    <EmbeddedResource Include="images\Spades6.jpg" />
+    <EmbeddedResource Include="images\Spades7.jpg" />
+    <EmbeddedResource Include="images\Spades8.jpg" />
+    <EmbeddedResource Include="images\Spades9.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="RulesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ScopaPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="StatsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
